@@ -28,6 +28,7 @@
             <select id="var">
                 <option value="v1" selected>v1</option>
                 <option value="v2">v2</option>
+                <option value="v3">v3</option>
             </select>
 
             <table class="table_style">

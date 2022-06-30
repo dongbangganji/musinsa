@@ -3,8 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Goods\GoodsController;
-use App\Http\Controllers\Goods\v1\GoodsController as GoodsControllerV1 ;
+use App\Http\Controllers\Goods\v1\GoodsController as GoodsControllerV1;
 use App\Http\Controllers\Goods\v2\GoodsController as GoodsControllerV2;
+use App\Http\Controllers\Goods\v3\GoodsController as GoodsControllerV3;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     });
     Route::group(['prefix' => '/v2'], function () {
         Route::resource('/goods', GoodsControllerV2::class)->only(['store', 'show']);
+    });
+    Route::group(['prefix' => '/v3'], function () {
+        Route::resource('/goods', GoodsControllerV3::class)->only(['store', 'show']);
     });
 
     Route::resource('/goods', GoodsController::class)->only(['store', 'show']);
