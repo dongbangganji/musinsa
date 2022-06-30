@@ -19,22 +19,25 @@
         }
     </style>
     <script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="/css/musinsa.css">
 </head>
 <body class="antialiased">
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+<div>
+@include('www.menu.head')
+<div class="list_body">
     <div>
-        <div>버전 :
-            <select id="var">
-                <option value="v1" selected>v1</option>
-                <option value="v2">v2</option>
-                <option value="v3">v3</option>
-            </select>
-        </div>
-        <div>상품명 : <input type="text" maxlength="100" id="goods_nm" value="{{$goods_nm}}"></div>
-        <div>상품설명 : <input type="text" id="goods_cont" value="{{$goods_cont}}"></div>
-        <div>업체아이디 : <input type="text" maxlength="20" id="com_id" value="{{$com_id}}"></div>
-        <div><input type="button" id="goods_submit" value="버튼"></div>
+        <label>버전 : </label>
+        <select id="var">
+            <option value="v1" selected>v1</option>
+            <option value="v2">v2</option>
+            <option value="v3">v3</option>
+        </select>
     </div>
+    <div><label>상품명 : </label><input type="text" maxlength="100" id="goods_nm" value="{{$goods_nm}}"></div>
+    <div><label>상품설명 : </label><input type="text" id="goods_cont" value="{{$goods_cont}}"></div>
+    <div><label>업체아이디 : </label><input type="text" maxlength="20" id="com_id" value="{{$com_id}}"></div>
+    <div class="bottom_button_list"><input type="button" id="goods_submit" class="w-btn-outline w-btn-red-outline" value="전송"></div>
+</div>
 </div>
 <script>
     $(document).on('click','#goods_submit',function (){
