@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\dbtest\DbtestController;
+use App\Http\Controllers\Goods\GoodsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +19,6 @@ Route::get('/', function () {
 });
 
 /**
- * 디비 테스트
+ * TODO 등록 페이지는 테스트 편의를 위해서 만들엇습니다.
  */
-Route::get('/dbtest', [DbtestController::class, 'index']);
+Route::resource('/goods', GoodsController::class)->only(['create','index']);
