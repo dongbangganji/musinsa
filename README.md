@@ -27,22 +27,18 @@ CREATE TABLE `goods` (
 ```
 
 ## 등록 페이지 : (GET) /goods/create
-
-![img_3.png](img_3.png)
+![img_2.png](img_2.png)
 <hr>
 
 ## 등록 api : (POTS) /api/v1/goods
-
-![img_4.png](img_4.png)
+![img_3.png](img_3.png)
 <hr>
 
 ## 리스트(조회) 페이지 : (GET) /goods
-
 ![img_1.png](img_1.png)
 <hr>
 
 ## 조회 api : (GET) /api/v1/goods/1
-
-![img_2.png](img_2.png)
+![img_4.png](img_4.png)
 
 
