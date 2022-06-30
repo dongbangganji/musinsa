@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => ['api.header']], function () {
+//Route::group(['middleware' => ['api.header']], function () {
     Route::group(['prefix' => '/v1'], function () {
         Route::resource('/goods', GoodsControllerV1::class)->only(['store', 'show']);
     });
@@ -30,4 +30,4 @@ Route::group(['middleware' => ['api.header']], function () {
     });
 
     Route::resource('/goods', GoodsController::class)->only(['store', 'show']);
-});
+//});

@@ -27,7 +27,6 @@
             <select id="var">
                 <option value="v1" selected>v1</option>
                 <option value="v2">v2</option>
-                <option>없음</option>
             </select>
         </div>
         <div>상품명 : <input type="text" maxlength="100" id="goods_nm" value="{{$goods_nm}}"></div>
@@ -42,11 +41,11 @@
         $.ajax({
             url: '/api'+$var+'/goods',
             type: 'POST',
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                'X-MUSINSA-CLIENT-ID': 'key', //TODO id와 key 노출 되지 않게 curl로 보내야 합니다.
-                'X-MUSINSA-CLIENT-KEY': '66eI7LyT7J6E'
-            },
+            // headers: {
+            //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                // 'X-MUSINSA-CLIENT-ID': 'key', //TODO id와 key 노출 되지 않게 curl로 보내야 합니다.
+                // 'X-MUSINSA-CLIENT-KEY': '66eI7LyT7J6E'
+            // },
             data: {
                 "goods_nm":$('#goods_nm').val(),
                 "goods_cont":$('#goods_cont').val(),

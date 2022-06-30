@@ -28,7 +28,6 @@
             <select id="var">
                 <option value="v1" selected>v1</option>
                 <option value="v2">v2</option>
-                <option>없음</option>
             </select>
 
             <table class="table_style">
@@ -62,12 +61,11 @@
             url: '/api'+$var+'/goods/'+$(this).data('no'),
             type: 'GET',
             headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                'X-MUSINSA-CLIENT-ID': 'key', //TODO id와 key 노출 되지 않게 curl로 보내야 합니다.
-                'X-MUSINSA-CLIENT-KEY': '66eI7LyT7J6E'
+                // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                // 'X-MUSINSA-CLIENT-ID': 'key', //TODO id와 key 노출 되지 않게 curl로 보내야 합니다.
+                // 'X-MUSINSA-CLIENT-KEY': '66eI7LyT7J6E'
             },
             success: function(data){
-                console.log(data);
                 alert('msg: '+data.msg+
                     '\nversion: '+data.version+
                     '\ncode: '+data.code+
