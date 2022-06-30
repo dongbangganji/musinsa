@@ -20,23 +20,29 @@ CREATE TABLE `goods` (
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COMMENT='상품마스터'
 ```
 ```
+    라라벨 9버전 / php 8.0 / mysql
+    
     goods_no 에 auto increment 를 추가 했습니다.
     reg_dm,upd_dm 에 기본값 now() 를 추가 했습니다.
 ```
 
-등록 페이지 : (GET) /goods/create
+## 등록 페이지 : (GET) /goods/create
+
 ![img_3.png](img_3.png)
 <hr>
 
-등록 api : (POTS) /api/v1/goods
+## 등록 api : (POTS) /api/v1/goods
+
 ![img_4.png](img_4.png)
 <hr>
 
-리스트(조회) 페이지 : (GET) /goods
+## 리스트(조회) 페이지 : (GET) /goods
+
 ![img_1.png](img_1.png)
 <hr>
 
-조회 api : (GET) /api/v1/goods/1
+## 조회 api : (GET) /api/v1/goods/1
+
 ![img_2.png](img_2.png)
 
 
